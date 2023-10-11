@@ -1,6 +1,8 @@
 /* GENERAL*/
 html,
 body {
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
@@ -171,6 +173,7 @@ body {
 
 .marge20 {
   margin-left: 20px;
+  margin-right: 15px;
 }
 
 .filtre-texte-icon {
@@ -185,7 +188,7 @@ body {
   width: 52px;
   height: 52px;
   color: #0065fc;
-  background-color: #deebff;
+  /*background-color: #deebff;*/
 }
 
 .filtre-texte-icon:hover>.texteEtfiltre {
@@ -194,7 +197,7 @@ body {
 
 .filtre-texte-icon:hover>.iconetfiltre {
   color: white;
-  background-color: #0065fc;
+  background-color: #598fdf;
 }
 
 .texteEtfiltre {
@@ -209,6 +212,7 @@ body {
 .icon-info {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .ordi-sup {
@@ -455,20 +459,12 @@ body {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 250px;
+  height: 530px;
   border-radius: 15px 15px 0 0;
 }
+
 
 .Picture3 {
-  background-image: url("../Image/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 150px;
-  border-radius: 15px 15px 0 0;
-}
-
-.Picture4 {
   background-image: url("../Image/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
   background-size: cover;
   background-position: center;
@@ -477,21 +473,12 @@ body {
   border-radius: 15px 15px 0 0;
 }
 
-.Picture5 {
+.Picture4 {
   background-image: url("../Image/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 200px;
-  border-radius: 15px 15px 0 0;
-}
-
-.Picture6 {
-  background-image: url("../Image/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 200px;
+  height: 530px;
   border-radius: 15px 15px 0 0;
 }
 
@@ -499,7 +486,9 @@ body {
 
 .footer {
   height: 300px;
-  margin-top: 100px;
+  margin-top: 75px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .taillepremier-block {
@@ -524,6 +513,37 @@ body {
 
 /*responsive*/
 
+@media screen and (max-width: 1024px){
+
+  #hébergements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .flexColumnAround-P{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Populaires{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+  }
+
+  .boîtes-populaires{
+    padding-left: 5px;
+    padding-right: 1px;
+    width: 90%;
+    margin: 8px;
+    margin-left: 6px;
+    margin-top: 1px;
+    margin-bottom: 33px
+  }
+}
+
 @media screen and (max-width: 992px) {
   .tel-filtre {
     flex-direction: column;
@@ -535,8 +555,10 @@ body {
   }
 
   #hébergements {
-    flex-direction: column-reverse;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
   }
 
   .popular-block {
@@ -545,6 +567,12 @@ body {
     margin-left: auto;
     padding: 5%;
   }
+
+  .Populaires {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+  }  
 
   .block-hebergements {
     flex: none;
@@ -565,24 +593,27 @@ body {
   }
 
   .block-hebergements {
-    background-color: white;
+    background-color: #f2f2f2;
     height: auto;
     margin-left: 2px;
+    margin-bottom: 50px;
   }
 
   .premier-block {
-    flex-direction: column;
     margin-bottom: 0;
   }
 
   .deuxièmeBlock {
-    flex-direction: column;
     margin-top: 0;
+  }
+
+  .carteHebergementCanebiere{
+    margin-top: auto;
   }
 
   .boîte-hebergements {
     background-color: white;
-    width: 90%;
+    /*width: 90%;*/
     margin-bottom: 7%;
   }
 
@@ -591,10 +622,16 @@ body {
   }
 
   .activity-block {
-    flex-direction: column;
+    flex-direction: center;
     height: auto;
 
   }
+  
+  .flexColumnAround-P{
+    display: flex;
+    flex-direction: row;
+  }
+  
 
   .boîtes-activites {
     width: 100%;
@@ -608,6 +645,7 @@ body {
 
   .activity-block12 {
     width: 90%;
+    margin-left: 21px;
   }
 
   .activity-block2356 {
@@ -626,15 +664,26 @@ body {
   }
 
   .popular-block {
-    border-radius: 0;
     width: 90%;
+    height: auto;
+  }
+
+  .boîtes-populaires{
+    padding-left: 5px;
+    padding-right: 1px;
+    width: 90%;
+    margin: 8px;
+    margin-left: 6px;
+    margin-top: 1px;
+    margin-bottom: -3px;
   }
 
   .footer {
-    flex-direction: column;
+    flex-direction: center;
     align-items: flex-start;
     width: 100%;
     height: auto;
+    margin: 0 auto;
 
   }
 
@@ -648,8 +697,24 @@ body {
     flex-direction: row;
   }
 
+  .flexAround{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info{
+    margin-bottom: -8%;
+  }
+  
+  #hébergements {
+    flex-direction: column-reverse;
+    margin: auto;
+  }
+
   .filtre-texte-icon {
     margin-top: 1px;
+    margin-right: 1px;
+    margin-left: 4px;
   }
 
   .link {
@@ -692,7 +757,8 @@ body {
 
   .block-hebergements {
     width: 80%;
-    margin-left: 2px;
+    margin-left: 15px;
+    background-color: snow;
   }
 
   .recherche {
@@ -715,7 +781,8 @@ body {
   }
 
   .marge-services {
-    padding-left: 5%;
+    margin-top: 30px;
+    margin-bottom: 6px;
   }
 
   .tel-E {
@@ -727,12 +794,13 @@ body {
   }
 
   .texteEtfiltre {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 2px;
+    padding-right: 20px;
+    width: max-content;
   }
 
-  .info {
-    padding-left: 5%;
+  .tel-filtre{
+    display: flex;
   }
 
   .boîtes-activites {
@@ -742,13 +810,30 @@ body {
 
   .popular-block {
     border-radius: 0;
-    width: 90%;
   }
+
+  .boîtes-populaires{
+    margin-bottom: 5%;
+  }
+
+  .flexColumnAround-P{
+    display: flex;
+    flex-direction: column;
+  }
+  
 
   .boîte-hebergements {
     background-color: white;
     width: 100%;
     margin-bottom: 7%;
+  }
+  .premier-block{
+    display: flex;
+    flex-direction: column;
+  }
+  .deuxièmeBlock{
+    display: flex;
+    flex-direction: column;
   }
 
   .spécifique-boîtes {
@@ -759,10 +844,17 @@ body {
     padding-left: 5%;
   }
 
+  #activites {
+  display: flex;
+  flex-direction: column;
+
+  }
+
   .activity-block {
-    padding: 5%;
+    padding: 2%;
     width: 90%;
     height: auto;
+    flex-direction: column;
   }
 
   .marge {
@@ -793,7 +885,7 @@ body {
   body {
     margin: 0;
     padding: 0;
-    overflow-x: auto;
+    overflow-x: clip;
   }
 
   .logo {
